@@ -1,0 +1,241 @@
+
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chiz Fashion Store</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- ================= NAVIGATION ================= -->
+
+    <nav>
+
+        <h2 class="logo">CHIZ</h2>
+
+        <a href="#">Home</a>
+        <a href="#products">Products</a>
+        <a href="#categories">Categories</a>
+        <a href="#contact">Contact</a>
+
+        <input
+            type="text"
+            id="searchinput"
+            placeholder="Search Product..."
+            onkeyup="searchProduct()">
+
+        <span id="cart">
+            🛒 <span id="cart-count">0</span>
+        </span>
+
+        <button class="dark-btn" onclick="darkMode()">
+            🌙
+        </button>
+
+    </nav>
+
+    <!-- ================= HERO ================= -->
+
+    <section class="hero">
+
+        <h1>Welcome to Chiz Fashion Store</h1>
+
+        <p>
+            Discover beautiful fashion items that make you
+            look elegant and confident.
+        </p>
+
+        <a href="#products" class="btn">
+            Shop Now
+        </a>
+
+    </section>
+
+    <!-- ================= PRODUCTS ================= -->
+
+    <section id="products" class="products">
+
+        <h2>Our Products</h2>
+
+        <div class="product-container">
+
+            <!-- Product 1 -->
+
+            <div class="product-card">
+
+                <span class="badge">20% OFF</span>
+
+                <img src="images/IMG_6859.JPG.jpg"
+                     alt="Luxury Handbag">
+
+                <h3>Luxury Handbag</h3>
+
+                <p>₦25,000</p>
+
+                <button
+                    class="favorite-btn"
+                    onclick="toggleFavorite(this)">
+                    🤍
+                </button>
+
+                <a
+                    href="#"
+                    class="buy-btn"
+                    onclick="buyProduct()">
+
+                    Buy Now
+
+                </a>
+
+            </div>
+
+            <!-- Product 2 -->
+
+            <div class="product-card">
+
+                <span class="badge">15% OFF</span>
+
+                <img src="images/IMG_6859.JPG.jpg"
+                     alt="Elegant Dress">
+
+                <h3>Elegant Dress</h3>
+
+                <p>₦40,000</p>
+
+                <button
+                    class="favorite-btn"
+                    onclick="toggleFavorite(this)">
+                    🤍
+                </button>
+
+                <a
+                    href="#"
+                    class="buy-btn"
+                    onclick="buyProduct()">
+
+                    Buy Now
+
+                </a>
+
+            </div>
+
+            <!-- Product 3 -->
+
+            <div class="product-card">
+
+                <span class="badge">10% OFF</span>
+
+                <img src="images/IMG_6859.JPG.jpg"
+                     alt="Classic Heels">
+
+                <h3>Classic Heels</h3>
+
+                <p>₦30,000</p>
+
+                <button
+                    class="favorite-btn"
+                    onclick="toggleFavorite(this)">
+                    🤍
+                </button>
+
+                <a
+                    href="#"
+                    class="buy-btn"
+                    onclick="buyProduct()">
+
+                    Buy Now
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+        <!-- ================= CATEGORIES ================= -->
+
+    <section id="categories" class="categories">
+
+        <h2>Shop by Category</h2>
+
+        <div class="category-container">
+
+            <div class="category">
+                <h3>👗 Dresses</h3>
+                <p>Elegant dresses for every occasion.</p>
+            </div>
+
+            <div class="category">
+                <h3>👜 Bags</h3>
+                <p>Luxury handbags that complete your look.</p>
+            </div>
+
+            <div class="category">
+                <h3>👠 Heels</h3>
+                <p>Beautiful heels for style and confidence.</p>
+            </div>
+
+            <div class="category">
+                <h3>💍 Accessories</h3>
+                <p>Fashion accessories to match every outfit.</p>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= CONTACT ================= -->
+
+    <section id="contact" class="contact">
+
+        <h2>Contact Us</h2>
+
+        <form>
+
+            <input
+                type="text"
+                placeholder="Your Name"
+                required>
+
+            <input
+                type="email"
+                placeholder="Your Email"
+                required>
+
+            <textarea
+                placeholder="Your Message"
+                rows="5"
+                required></textarea>
+
+            <button type="submit">
+                Send Message
+            </button>
+
+        </form>
+
+    </section>
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer>
+
+        <h3>Chiz Fashion Store</h3>
+
+        <p>📧 chizfashion@email.com</p>
+
+        <p>📞 +234 813 715 4104</p>
+
+        <p>© 2026 Chiz Fashion Store. All Rights Reserved.</p>
+
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
