@@ -1,5 +1,4 @@
-
-    <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -7,235 +6,288 @@
     <title>Chiz Fashion Store</title>
 
     <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
 </head>
 
 <body>
 
-    <!-- ================= NAVIGATION ================= -->
+<header>
 
-    <nav>
+    <nav class="navbar">
 
-        <h2 class="logo">CHIZ</h2>
+        <h2 class="logo">Chiz Fashion Store</h2>
 
-        <a href="#">Home</a>
-        <a href="#products">Products</a>
-        <a href="#categories">Categories</a>
-        <a href="#contact">Contact</a>
+        <ul class="nav-links">
 
-        <input
-            type="text"
-            id="searchinput"
-            placeholder="Search Product..."
-            onkeyup="searchProduct()">
+            <li><a href="#">Home</a></li>
+            <li><a href="#products">Products</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
 
-        <span id="cart">
-            🛒 <span id="cart-count">0</span>
-        </span>
+        </ul>
 
-        <button class="dark-btn" onclick="darkMode()">
-            🌙
-        </button>
+        <div class="icons">
+
+            <button id="wishlist-btn">
+                ❤️ <span id="wishlist-count">0</span>
+            </button>
+
+            <button id="cart-btn">
+                🛒 <span id="cart-count">0</span>
+            </button>
+
+        </div>
 
     </nav>
 
-    <!-- ================= HERO ================= -->
+</header>
 
-    <section class="hero">
+<section class="hero">
 
-        <h1>Welcome to Chiz Fashion Store</h1>
+    <div class="hero-text">
+
+        <h1>Upgrade Your Style</h1>
 
         <p>
-            Discover beautiful fashion items that make you
-            look elegant and confident.
+            Discover premium fashion collections at affordable prices.
         </p>
 
-        <a href="#products" class="btn">
+        <a href="#products" class="shop-btn">
             Shop Now
         </a>
 
-    </section>
+    </div>
 
-    <!-- ================= PRODUCTS ================= -->
+</section>
 
-    <section id="products" class="products">
+<section class="search-section">
 
-        <h2>Our Products</h2>
+    <input
+        type="text"
+        id="search"
+        placeholder="Search products...">
 
-        <div class="product-container">
+    <select id="category">
 
-            <!-- Product 1 -->
+        <option value="all">All Categories</option>
 
-            <div class="product-card">
+        <option value="dress">Dress</option>
 
-                <span class="badge">20% OFF</span>
+        <option value="bag">Bag</option>
 
-                <img src="images/IMG_6859.JPG.jpg"
-                     alt="Luxury Handbag">
+        <option value="shoe">Shoe</option>
 
-                <h3>Luxury Handbag</h3>
+        <option value="watch">Watch</option>
 
-                <p>₦25,000</p>
+    </select>
 
-                <button
-                    class="favorite-btn"
-                    onclick="toggleFavorite(this)">
-                    🤍
-                </button>
+</section>
 
-                <a
-                    href="#"
-                    class="buy-btn"
-                    onclick="buyProduct()">
+<section id="products" class="products">
 
-                    Buy Now
+<h2>Featured Products</h2>
 
-                </a>
+<div class="product-container">
 
-            </div>
+<div class="product-card" data-category="dress">
 
-            <!-- Product 2 -->
+<img src="images/dress.png" alt="Dress">
 
-            <div class="product-card">
+<h3>Elegant Dress</h3>
 
-                <span class="badge">15% OFF</span>
+<p class="price">₦25,000</p>
 
-                <img src="images/IMG_6859.JPG.jpg"
-                     alt="Elegant Dress">
+<button class="cart-btn"
+data-name="Elegant Dress"
+data-price="25000">
 
-                <h3>Elegant Dress</h3>
+Add to Cart
 
-                <p>₦40,000</p>
+</button>
 
-                <button
-                    class="favorite-btn"
-                    onclick="toggleFavorite(this)">
-                    🤍
-                </button>
+<button class="wish-btn">
+❤️ Wishlist
+</button>
 
-                <a
-                    href="#"
-                    class="buy-btn"
-                    onclick="buyProduct()">
+</div>
 
-                    Buy Now
+<div class="product-card" data-category="bag">
 
-                </a>
+<img src="images/bag.png" alt="Bag">
 
-            </div>
+<h3>Luxury Handbag</h3>
 
-            <!-- Product 3 -->
+<p class="price">₦30,000</p>
 
-            <div class="product-card">
+<button class="cart-btn"
+data-name="Luxury Handbag"
+data-price="30000">
 
-                <span class="badge">10% OFF</span>
+Add to Cart
 
-                <img src="images/IMG_6859.JPG.jpg"
-                     alt="Classic Heels">
+</button>
 
-                <h3>Classic Heels</h3>
+<button class="wish-btn">
+❤️ Wishlist
+</button>
 
-                <p>₦30,000</p>
+</div>
 
-                <button
-                    class="favorite-btn"
-                    onclick="toggleFavorite(this)">
-                    🤍
-                </button>
+<div class="product-card" data-category="shoe">
 
-                <a
-                    href="#"
-                    class="buy-btn"
-                    onclick="buyProduct()">
+<img src="images/shoes.png" alt="Shoes">
 
-                    Buy Now
+<h3>Classic Sneakers</h3>
 
-                </a>
+<p class="price">₦18,000</p>
 
-            </div>
+<button class="cart-btn"
+data-name="Classic Sneakers"
+data-price="18000">
 
-        </div>
+Add to Cart
 
-    </section>
-        <!-- ================= CATEGORIES ================= -->
+</button>
 
-    <section id="categories" class="categories">
+<button class="wish-btn">
+❤️ Wishlist
+</button>
 
-        <h2>Shop by Category</h2>
+</div>
+<div class="product-card" data-category="watch">
 
-        <div class="category-container">
+    <img src="images/watch.png" alt="Watch">
 
-            <div class="category">
-                <h3>👗 Dresses</h3>
-                <p>Elegant dresses for every occasion.</p>
-            </div>
+    <h3>Luxury Wrist Watch</h3>
 
-            <div class="category">
-                <h3>👜 Bags</h3>
-                <p>Luxury handbags that complete your look.</p>
-            </div>
+    <p class="price">₦35,000</p>
 
-            <div class="category">
-                <h3>👠 Heels</h3>
-                <p>Beautiful heels for style and confidence.</p>
-            </div>
+    <button class="cart-btn"
+        data-name="Luxury Wrist Watch"
+        data-price="35000">
 
-            <div class="category">
-                <h3>💍 Accessories</h3>
-                <p>Fashion accessories to match every outfit.</p>
-            </div>
+        Add to Cart
 
-        </div>
+    </button>
 
-    </section>
+    <button class="wish-btn">
+        ❤️ Wishlist
+    </button>
 
+</div>
 
-    <!-- ================= CONTACT ================= -->
+<div class="product-card" data-category="dress">
 
-    <section id="contact" class="contact">
+    <img src="images/blazer.png" alt="Blazer">
 
-        <h2>Contact Us</h2>
+    <h3>Elegant Blazer</h3>
 
-        <form>
+    <p class="price">₦28,000</p>
 
-            <input
-                type="text"
-                placeholder="Your Name"
-                required>
+    <button class="cart-btn"
+        data-name="Elegant Blazer"
+        data-price="28000">
 
-            <input
-                type="email"
-                placeholder="Your Email"
-                required>
+        Add to Cart
 
-            <textarea
-                placeholder="Your Message"
-                rows="5"
-                required></textarea>
+    </button>
 
-            <button type="submit">
-                Send Message
-            </button>
+    <button class="wish-btn">
+        ❤️ Wishlist
+    </button>
 
-        </form>
+</div>
 
-    </section>
+<div class="product-card" data-category="bag">
 
+    <img src="images/tote.png" alt="Tote Bag">
 
-    <!-- ================= FOOTER ================= -->
+    <h3>Leather Tote Bag</h3>
 
-    <footer>
+    <p class="price">₦32,000</p>
 
-        <h3>Chiz Fashion Store</h3>
+    <button class="cart-btn"
+        data-name="Leather Tote Bag"
+        data-price="32000">
 
-        <p>📧 chizfashion@email.com</p>
+        Add to Cart
 
-        <p>📞 +234 813 715 4104</p>
+    </button>
 
-        <p>© 2026 Chiz Fashion Store. All Rights Reserved.</p>
+    <button class="wish-btn">
+        ❤️ Wishlist
+    </button>
 
-    </footer>
+</div>
 
-    <script src="script.js"></script>
+</div>
 
+</section>
+
+<section id="about" class="about">
+
+    <h2>About Us</h2>
+
+    <p>
+        Chiz Fashion Store offers quality fashion items at affordable prices.
+        Our mission is to help everyone look stylish without spending a fortune.
+    </p>
+
+</section>
+
+<section id="contact" class="contact">
+
+    <h2>Contact Us</h2>
+
+    <p>Email: chizfashionstore@gmail.com</p>
+
+    <p>Phone: +234 XXX XXX XXXX</p>
+
+    <a
+        class="whatsapp-btn"
+        href="https://wa.me/2348000000000"
+        target="_blank">
+
+        Order on WhatsApp
+
+    </a>
+
+</section>
+
+<footer>
+
+    <p>
+        © 2026 Chiz Fashion Store. All Rights Reserved.
+    </p>
+
+</footer>
+
+<script src="script.js" defer></script>
+<!-- CART -->
+<div id="cart-panel" class="cart-panel">
+
+    <div class="cart-header">
+        <h2>Shopping Cart</h2>
+        <button id="close-cart">✕</button>
+    </div>
+
+    <div id="cart-items"></div>
+
+    <div class="cart-total">
+        <strong>Total:</strong>
+        <span id="cart-total">₦0</span>
+    </div>
+
+    <button id="checkout-btn" class="checkout-btn">
+        Checkout
+    </button>
+
+</div>
 </body>
+
 </html>
